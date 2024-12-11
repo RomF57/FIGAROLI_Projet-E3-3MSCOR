@@ -3,7 +3,7 @@ FIGAROLI Romain
 Groupe : Kadi Soulaymane / Hambourger Tomy / Ahmadi Rateb / Bernard Jonathan
 
 <!-- TABLE OF CONTENTS --> <details> <summary>Table des matières</summary> <ol> <li><a href="#Environnement de travail">Environnement de travail</a></li> <li><a href="#Initialisation des applications">Initialisation des applications</a></li> 
-<li><a href="#Optimisation des images">Optimisation des images</a></li> <li><a href="#Configuration des fichiers pour les applications">Configuration des fichiers pour les applications</a></li> <li><a href="#Configuration de l'application en HTML5">Configuration de l'application en HTML5</a></li> <li><a href="#Build des images">Build des images</a></li> <li><a href="#Tests et preuves">Tests et preuves</a></li> <li><a href="#Questions du projet">Questions du projet</a></li> </ol> </details>
+<li><a href="#Optimisation des images">Optimisation des images</a></li> <li><a href="#Configuration des fichiers pour les applications">Configuration des fichiers pour les applications</a></li> <li><a href="#Configuration de l'application en HTML5">Configuration de l'application en HTML5</a></li> <li><a href="#Build des images">Build des images</a></li> <li><a href="#Tests et preuves">Tests et preuves</a></li> <li><a href="#Mises des images sur Docker Hub">Mises des images sur Docker Hub</a></li> <li><a href="#Questions du projet">Questions du projet</a></li> </ol> </details>
 
 ## Environnement de travail
 
