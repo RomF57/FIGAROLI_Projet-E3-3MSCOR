@@ -1,0 +1,77 @@
+version: '3.8'
+services:
+# Application Interne
+  django-argon-dashboard:
+    container_name: django-argon-dashboard
+    restart: always
+    ports :
+      - "1001:1001"
+    build: "./django-argon-dashboard"
+    networks:
+      - db_network
+      - web_network
+# Application Externe
+  django-coreui:
+    container_name: django-coreui
+    restart: always
+    build: "./django-coreui"
+    networks:
+      - db_network
+      - web_network
+  django-datta-able:
+    container_name: django-datta-able
+    restart: always
+    build: "./django-datta-able"
+    networks:
+      - db_network
+      - web_network
+  django-material-dashboard:
+    container_name: django-material-dashboard
+    restart: always
+    build: "./django-material-dashboard"
+    networks:
+      - db_network
+      - web_network
+  django-pixel:
+    container_name: django-pixel
+    restart: always
+    build: "./django-pixel"
+    networks:
+      - db_network
+      - web_network
+  django-soft-ui-design:
+    container_name: django-soft-ui-design
+    restart: always
+    build: "./django-soft-ui-design"
+    networks:
+      - db_network
+      - web_network
+  nginx:
+    container_name: nginx
+    restart: always
+    image: "nginx:stable-alpine-slim"
+    ports:
+      - "8087:8087"
+      - "80:80"
+      - "8082:8082"
+      - "8083:8083"
+      - "8084:8084"
+      - "8085:8085"
+      - "8086:8086"
+    volumes:
+      - ./nginx/html:/usr/share/nginx/html
+      - ./nginx:/etc/nginx/conf.d
+    networks:
+      - web_network
+    depends_on: 
+      - django-coreui
+      - django-datta-able
+      - django-material-dashboard
+      - django-pixel
+      - django-soft-ui-design
+networks:
+  db_network:
+    driver: bridge
+  web_network:
+    driver: bridge
+ 
